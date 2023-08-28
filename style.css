@@ -59,33 +59,10 @@ button {
 button:hover{
   scale: 1.1;
 }
-img {
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  pointer-events: none;
-  display: none;
-}
-.winner_image {
-  display: block;
-  animation-name: winner_image_keys;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-@keyframes winner_image_keys {
-  0% {
-    filter: opacity(0%);
-    transform: scale(0%);
-  }
-  100% {
-    filter: opacity(100%);
-    transform: scale(100%);
-  }
-}
 .winner_title {
   color: rgb(105, 209, 105);
   animation-name: winner_title_keys;
-  animation-duration: 0.35s;
+  animation-duration: 0.4s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -95,6 +72,6 @@ img {
     transform: scale(100%);
   }
   100% {
-    transform: scale(150%);
+    transform: scale(120%);
   }
 }

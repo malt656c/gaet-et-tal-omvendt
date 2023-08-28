@@ -23,6 +23,7 @@ function guess() {
   computerGuessDisplay.textContent = currentGuess;
   if (currentGuess == myNumber) {
     computerGuessDisplay.textContent = "your number is: " + currentGuess;
+    computerGuessDisplay.classList = "winner_title"
     document.querySelector("span").textContent = "guessed in: " + counter + " tries";
   } else if (currentGuess < myNumber) {
     minNumber = currentGuess;
