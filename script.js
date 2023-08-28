@@ -29,9 +29,11 @@ function guess() {
     minNumber = currentGuess;
     currentGuess = Math.floor((maxNumber + minNumber) / 2);
     counter++;
+    computerGuessDisplay.textContent += " is too low";
   } else if (currentGuess > myNumber) {
     maxNumber = currentGuess;
     currentGuess = Math.floor((maxNumber + minNumber) / 2);
     counter++;
+    computerGuessDisplay.textContent += " is too high";
   }
 }
