@@ -3,6 +3,7 @@ let minNumber;
 let maxNumber;
 let myNumber;
 let currentGuess;
+let counter = 1;
 document.querySelector("button").addEventListener("click", init);
 /*  */
 function init() {
@@ -22,11 +23,14 @@ function guess() {
   computerGuessDisplay.textContent = currentGuess;
   if (currentGuess == myNumber) {
     computerGuessDisplay.textContent = "your number is: " + currentGuess;
+    document.querySelector("span").textContent = "guessed in: " + counter + " tries";
   } else if (currentGuess < myNumber) {
     minNumber = currentGuess;
     currentGuess = Math.floor((maxNumber + minNumber) / 2);
+    counter++;
   } else if (currentGuess > myNumber) {
     maxNumber = currentGuess;
     currentGuess = Math.floor((maxNumber + minNumber) / 2);
+    counter++;
   }
 }
